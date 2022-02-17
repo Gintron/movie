@@ -1,0 +1,14 @@
+<a href="{{ route('movies.index') }}" > Back to movie list </a>
+<h1>Show </h1>
+{{ movie.title }}
+<br>
+{{ movie.description }}
+<br>
+{{ movie.author }}
+<br>
+{{ movie.rating }}
+<br>
+ <a href="{{ route('movies.edit', {id:movie.id} ) }}" > Edit movie </a>
+<form action="/movies/{{movie.id}}?_method=DELETE" method="post">
+    <button type="submit">Delete</button>
+</form>

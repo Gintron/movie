@@ -1,0 +1,10 @@
+<a href="{{ route('categories.index') }}" > Back to category list </a>
+<h1>Show </h1>
+{{ category.title }}
+<br>
+{{ category.is_active}}
+<br>
+ <a href="{{ route('categories.edit', {id:category.id} ) }}" > Edit category </a>
+<form action="/categories/{{category.id}}?_method=DELETE" method="post">
+    <button type="submit">Delete</button>
+</form>

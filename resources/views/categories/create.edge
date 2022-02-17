@@ -1,0 +1,15 @@
+<h1>Create category </h1>
+
+<form action="{{ route('categories.store') }}" method="POST">
+<input type="text" name="title" placeholder="title">
+<input type="radio" name="is_active" value="1"
+         checked>
+<input type="radio" name="is_active" value="0">
+<label for="is_active">Is active</label>
+
+<button type="submit">Submit category</button>
+</form>
+
+@if(flashMessages.has('errors.title'))
+    <p> {{ flashMessages.get('errors.title') }}
+@end

@@ -1,0 +1,8 @@
+<h1>Category</h1>
+<a href="{{ route('categories.create')  }}" > Create category </a>
+<br>
+<br>
+@each(category in categories)
+    <a href="{{ route('categories.show', {id:category.id} ) }}" > {{ category.title   }}</a>
+    <br>
+@endeach

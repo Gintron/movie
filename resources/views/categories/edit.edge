@@ -1,0 +1,22 @@
+<h1>Edit category </h1>
+
+<form action="/categories/{{category.id}}?_method=PUT" method="post">
+<input type="text" name="title" placeholder="title" value="{{ category.title }}">
+<input type="radio" name="is_active" value="1"
+@if(category.is_active == 1)
+    checked
+@end
+>
+<input type="radio" name="is_active" value="0"
+@if(category.is_active == 0)
+    checked
+@end
+>
+<label for="is_active">Is active</label>
+<button type="submit">Edit Category</button>
+</form>
+
+@if(flashMessages.has('errors.title'))
+    <p> {{ flashMessages.get('errors.title') }}
+@end
+

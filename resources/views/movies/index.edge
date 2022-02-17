@@ -1,0 +1,8 @@
+<h1>Movies</h1>
+<a href="{{ route('movies.create')  }}" > Create movie </a>
+<br>
+<br>
+@each(movie in movies)
+    <a href="{{ route('movies.show', {id:movie.id} ) }}" > {{ movie.title   }}</a>
+    <br>
+@endeach
